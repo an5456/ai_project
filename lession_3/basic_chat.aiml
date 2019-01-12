@@ -1,0 +1,179 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+    <!--<category>-->
+        <!--<pattern>贪心 学院</pattern>-->
+        <!--<template>-->
+            <!--大家好-->
+        <!--</template>-->
+
+    <!--</category>-->
+    <category>
+        <pattern>贪心 学院 是 做 *</pattern>
+        <template>贪心学院是一家高端重视售后服务的在线教育培训机构</template>
+    </category>
+    <category>
+        <pattern>贪心</pattern>
+        <template>
+            贪心学院是一家高端重视售后服务的在线教育培训机构;
+            项目式培训
+        </template>
+    </category>
+    <category>
+        <pattern>贪心 学院</pattern>
+        <template>
+            贪心学院是一家高端重视售后服务的在线教育培训机构;
+            项目式培训
+        </template>
+
+    </category>
+    <category>
+        <pattern>什么 是 项目式 培训</pattern>
+        <template>
+            <set name="username">贪心学院的项目式培训结合了西方项目式培训的优点和国内的现状，最终变化成以训练营的方式进行。\n
+            做项目为主，老师负责解决部分知识的问题，学生负责自学部分知识，和不停的做项目，把知识巩固。\n
+            在项目练习中，不仅仅学习到了知识，同时也培养起来良好的学习习惯和解决问题的能力.</set>
+        </template>
+    </category>
+    <category>
+        <pattern>项目式</pattern>
+        <template>
+            <get name="username"/>
+        </template>
+    </category>
+    <category>
+        <pattern>人工智能 哪家 强</pattern>
+        <template>贪心学院</template>
+    </category>
+    <category>
+        <pattern>强</pattern>
+        <template>贪心学院</template>
+    </category>
+    <category>
+        <pattern>Python+AI 课程 适合 什么样 的 同学 学习 </pattern>
+        <template>无编程基础，并且想学习编程的同学。</template>
+    </category>
+    <!--一个 * 是 一种 * 吗-->
+    <category>
+        <pattern>一个 * 是 一种 * 吗</pattern>
+        <template>
+            第一个参数是:<star index="1"/>,第二个参数是:<star index="2"/>
+        </template>
+    </category>
+    <category>
+        <pattern>我 想 你 了</pattern>
+        <template>
+            <random>
+                <li>我也想你了</li>
+                <li>不要脸，想我干啥</li>
+                <li>你真奔放啊，上来就说想人家</li>
+                <li>上旁边想去</li>
+            </random>
+        </template>
+    </category>
+    <!--<category>-->
+        <!--<pattern>你好</pattern>-->
+        <!--<template>-->
+            <!--<random>-->
+                <!--<li>你好啊</li>-->
+                <!--<li>很高兴见到你</li>-->
+                <!--<li>好巧啊，你也来啦</li>-->
+                <!--<li>是不是又想我了</li>-->
+            <!--</random>-->
+        <!--</template>-->
+    <!--</category>-->
+    <!--<category>-->
+        <!--<pattern>你好 *</pattern>-->
+        <!--<template>-->
+             <!--<srai>你好</srai>-->
+        <!--</template>-->
+
+    <!--</category>-->
+    <category>
+        <pattern>你 好</pattern>
+        <template>
+            <random>
+                <li>你好啊</li>
+                <li>很高兴见到你</li>
+                <li>好巧啊，你也来啦</li>
+                <li>是不是又想我了</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>你 好 *</pattern>
+        <template>
+            <srai>你 好</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>你好 我 是 *</pattern>
+        <template>
+            你好啊<set name="username"><star/></set>很高兴见到你!
+        </template>
+    </category>
+    <category>
+        <pattern>晚安</pattern>
+        <template>美梦,<get name="username"/> 期待和你下次聊天,拜拜</template>
+    </category>
+    <category>
+        <pattern>你 喜欢 哪个 明星 吗</pattern>
+        <template>刘德华</template>
+    </category>
+    <category>
+        <pattern>我 也是</pattern>
+        <that>刘德华</that>
+        <template>太棒了，我也喜欢刘德华啊，但是非常可惜，最后一次演唱会了</template>
+    </category>
+    <category>
+        <pattern>我 喜欢 张学友</pattern>
+        <that>刘德华</that>
+        <template>我也很喜欢他啊</template>
+    </category>
+
+    <category>
+        <pattern>我们 讨论一下 作业 吧</pattern>
+        <template>好啊，那就聊聊<set name="topic">作业</set>呗</template>
+    </category>
+    <topic name = "作业">
+        <category>
+            <pattern>好难 啊</pattern>
+            <template>作业真是难，我也这么想的，太难啦</template>
+        </category>
+        <category>
+            <pattern>作业 怎么 做</pattern>
+            <template>你说什么呢，我不理解</template>
+        </category>
+    </topic>
+    <category>
+        <pattern>我 的 名字 是 *</pattern>
+        <template>你好，欢迎来到贪心学院！<think><set name="username1"><star/></set></think></template>
+    </category>
+    <category>
+        <pattern>不聊 了</pattern>
+        <template>
+            好啊<get name="username1"/>，那下次再聊
+        </template>
+    </category>
+    <category>
+        <pattern>我 喜欢 *</pattern>
+        <template>
+            <think>
+                <set name="star"><star/></set>
+            </think>
+
+            哇塞，你好
+            <condition name="star">
+                <li value="健身">帅啊</li>
+                <li value="读书">有内涵啊</li>
+                <li>666啊</li>
+            </condition>
+        </template>
+
+    </category>
+
+
+
+
+
+
+</aiml>
