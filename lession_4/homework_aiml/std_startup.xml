@@ -1,0 +1,16 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+    <category>
+        <pattern>LOAD AIML B</pattern>
+
+        <!--template是一个响应的模板-->
+        <!--learn里边要配置一个aiml文件 learn标签可以是多个-->
+        <template>
+            <learn>basic_chat.aiml</learn>
+        </template>
+
+    </category>
+
+
+
+ </aiml>
